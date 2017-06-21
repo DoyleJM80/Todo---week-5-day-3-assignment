@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>todo list</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1></h1>
+      <form class="" action="/todo" method="post">
+        <input type="text" name="task" value="" placeholder="add new task here">
+        <input type="submit" name="" value="send">
+      </form>
+      <section class="list-section">
+        {{#todos}}
+          <div class="listItem">
+            {{task}}
+          </div>
+        {{/todos}}
+      </section>
+
+
+    </div>
+
+
+
+  </body>
+</html>
