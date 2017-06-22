@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>todo list</title>
+    <title>To Do List</title>
   </head>
   <body>
-    <div class="container">
-      <h1></h1>
-      <form class="" action="/todo" method="post">
-        <input type="text" name="task" value="" placeholder="add new task here">
-        <input type="submit" name="" value="send">
-      </form>
-      <section class="list-section">
-        {{#todos}}
-          <div class="listItem">
-            {{task}}
-          </div>
-        {{/todos}}
-      </section>
+    <form class="" action="/" method="post">
+      <input type="text" name="todo" value="" placeholder="Add a new task here">
+      <input type="submit" name="" value="add">
+    </form>
 
+      {{#list}}
+        <form class="" action="/todo/{{id}}/complete/" method="post">
+          <input type="submit" name="complete" value="complete">
+          <label for="complete">{{.}}</label>
+        </form>
+      {{/list}}
 
-    </div>
-
-
-
+      <h2>Complete</h2>
+      {{#complete}}
+        {{.}}<br>
+      {{/complete}}
   </body>
 </html>
